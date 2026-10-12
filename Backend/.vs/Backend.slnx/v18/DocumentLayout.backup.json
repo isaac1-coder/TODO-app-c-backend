@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Programming projects in vs code\u002B3d model(fusion360)\\TODO backend app in c\u002B\u002B\\Backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CE7B88EC-8EAA-4F11-98A4-E76D65438D02}|Backend\\Backend.vcxproj|C:\\Programming projects in vs code\u002B3d model(fusion360)\\TODO backend app in c\u002B\u002B\\Backend\\Backend\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CE7B88EC-8EAA-4F11-98A4-E76D65438D02}|Backend\\Backend.vcxproj|solutionrelative:Backend\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Main.cpp",
+              "DocumentMoniker": "C:\\Programming projects in vs code\u002B3d model(fusion360)\\TODO backend app in c\u002B\u002B\\Backend\\Backend\\Main.cpp",
+              "RelativeDocumentMoniker": "Backend\\Main.cpp",
+              "ToolTip": "C:\\Programming projects in vs code\u002B3d model(fusion360)\\TODO backend app in c\u002B\u002B\\Backend\\Backend\\Main.cpp",
+              "RelativeToolTip": "Backend\\Main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-10-11T18:22:49.02Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

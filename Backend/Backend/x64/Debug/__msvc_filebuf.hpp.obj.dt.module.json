@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "x64\\Debug\\__msvc_filebuf.obj",
+            "outputs": [
+                "x64\\Debug\\__msvc_filebuf.hpp.obj.dt.module.json",
+                "x64\\Debug\\__msvc_filebuf.hpp.obj.dt.d.json"
+            ],
+            "requires": []
+        }
+    ]
+}
