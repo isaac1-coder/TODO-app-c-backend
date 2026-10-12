@@ -19,6 +19,13 @@
         body: input.value
     });
 
+function getTasks()
+{
+     fetch("http://localhost:8080/gettaks", {
+        method: "GET",
+    });
+}
+
     input.value = "";
 }
     </script>
