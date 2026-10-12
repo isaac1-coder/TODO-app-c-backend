@@ -6,15 +6,21 @@
     <title>TODO</title>
 </head>
 <body>
-    <input type="text">
-    <button onclick="addTask()"></button>
-    
-    
-</body>
-<script>
-    function addTask()
-    {
+    <input type="text" id="taskInput" placeholder="Enter a new task">
+    <button onclick="addTask()">Add TODO</button>
 
-    }
-</script>
+    <script>
+    function addTask() 
+    {
+        var input = document.getElementById("taskInput");
+    
+        fetch("http://localhost:8080/tasks", {
+        method: "POST",
+        body: input.value
+    });
+
+    input.value = "";
+}
+    </script>
+</body>
 </html>
