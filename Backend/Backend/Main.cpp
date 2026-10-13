@@ -8,7 +8,13 @@ int main() {
     httplib::Server svr;
     std::vector<std::string> tasks;
 
-    // 3. DEFINE THE GET ROUTE: Triggered when someone requests http://localhost:8080/tasks
+    // 2. DEFINE THE ROOT ROUTE: Keeps the main URL from returning 404
+    svr.Get("/", [](const httplib::Request& req, httplib::Response& res) {
+        res.set_header("Access-Control-Allow-Origin", "*");
+        res.set_content("C++ Backend Server is up and running!", "text/plain");
+    });
+
+    // 3. DEFINE THE GET ROUTE: Triggered when someone requests /tasks
     svr.Get("/tasks", [&tasks](const httplib::Request& req, httplib::Response& res) {
         
         // Combine all tasks in our vector into a single string, separated by newlines
@@ -42,9 +48,9 @@ int main() {
         res.set_content("Task added successfully", "text/plain");
     });
 
-    // 5. START THE SERVER: Bind it to port 8080 and start listening
-    std::cout << "C++ Backend running at http://localhost:8080...\n";
-    svr.listen("localhost", 8080);
+    // 5. START THE SERVER: Bind to 0.0.0.0 and port 8080 for Codespaces forwarding
+    std::cout << "C++ Backend running on port 8080...\n";
+    svr.listen("0.0.0.0", 8080);
 
     return 0;
 }
