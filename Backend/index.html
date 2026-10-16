@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TODO</title>
 </head>
+
 <body>
     <input type="text" id="taskInput" placeholder="Enter a new task">
     <button onclick="addTask()">Add TODO</button>
 
     <script>
-    function addTask() 
-    {
-        var input = document.getElementById("taskInput");
-    
-        fetch("http://localhost:8080/tasks", {
-        method: "POST",
-        body: input.value
-    });
+        function addTask() 
+        {
+            var input = document.getElementById("taskInput");
 
-function getTasks()
-{
-     fetch("http://localhost:8080/gettaks", {
-        method: "GET",
-    });
-}
+            fetch("http://localhost:8080/tasks", {
+                method: "POST",
+                body: input.value
+            });
+        }
 
-    input.value = "";
-}
+        function getTasks()
+        {
+
+        }
+
     </script>
 </body>
+
 </html>
