@@ -4,29 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TODO</title>
+    <title>C++ TODO App</title>
 </head>
 
 <body>
+    <h1>My C++ Todo List</h1>
+
     <input type="text" id="taskInput" placeholder="Enter a new task">
     <button onclick="addTask()">Add TODO</button>
+    <button onclick="getTasks()">Load Tasks</button>
+
+    <ul id="taskList"></ul>
 
     <script>
-        function addTask() 
-        {
+        async function addTask() {
             var input = document.getElementById("taskInput");
+            if (!input.value.trim()) return;
 
-            fetch("http://localhost:8080/tasks", {
+            // Send POST request to C++ backend
+            await fetch("http://localhost:8080/tasks", {
                 method: "POST",
                 body: input.value
             });
+
+            input.value = ""; // Clear input field
+            getTasks();       // Refresh the list automatically
         }
 
-        function getTasks()
-        {
+        async function getTasks() {
+            // Send GET request to C++ backend
+            const response = await fetch("http://localhost:8080/tasks");
+            const data = await response.text();
 
+            const taskList = document.getElementById("taskList");
+            taskList.innerHTML = ""; // Clear current list
+
+            // Split the newline-separated text string from C++ into an array
+            const tasks = data.split("\n");
+
+            tasks.forEach(task => {
+                if (task.trim() !== "") {
+                    const li = document.createElement("li");
+                    li.textContent = task;
+                    taskList.appendChild(li);
+                }
+            });
         }
 
+        // Automatically load tasks when the page first opens
+        getTasks();
     </script>
 </body>
 
